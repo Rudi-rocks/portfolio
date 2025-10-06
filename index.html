@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Rudra "Rudi" Pratap Singh — Portfolio</title>
+  <!-- Tailwind CDN (for quick prototyping) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--glass-bg: rgba(255,255,255,0.06);--accent:#00e6ff;--muted:#bfc8d7}
+    body{font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:linear-gradient(180deg,#06060a 0%, #0e0f13 60%);color:#e6eef8}
+    .glass { background: var(--glass-bg); backdrop-filter: blur(10px) saturate(140%); border:1px solid rgba(255,255,255,0.06); }
+    .glow { box-shadow: 0 8px 30px rgba(0,230,255,0.06), inset 0 -1px 0 rgba(255,255,255,0.02);}    
+    /* neon text outline */
+    .neon { color: var(--accent); text-shadow: 0 2px 14px rgba(0,230,255,0.16); }
+    /* subtle float */
+    .float { transform: translateY(0); transition: transform .4s cubic-bezier(.2,.9,.2,1); }
+    .float:hover{ transform: translateY(-8px) }
+    /* fade-in helpers */
+    .reveal{opacity:0;transform:translateY(12px);animation:reveal .8s ease forwards}
+    .delay-1{animation-delay:.2s}.delay-2{animation-delay:.45s}.delay-3{animation-delay:.7s}
+    @keyframes reveal{to{opacity:1;transform:none}}
+    /* decorative gradient ring */
+    .ring-accent{background:linear-gradient(135deg, rgba(0,230,255,0.12), rgba(0,123,255,0.06)); border-radius:9999px}
+    /* project hover glow */
+    .project-card:hover{box-shadow:0 12px 40px rgba(0,230,255,0.06);transform:translateY(-10px) scale(1.01)}
+    /* responsive tweaks */
+    @media (min-width:1024px){.hero-title{font-size:clamp(40px,6vw,64px)}}
+  </style>
+</head>
+<body class="antialiased">
+  <!-- HERO -->
+  <header class="w-full min-h-screen flex items-center justify-center relative overflow-hidden">
+    <div class="absolute inset-0 -z-10" aria-hidden>
+      <div class="absolute -left-40 -top-40 w-[700px] h-[700px] rounded-full ring-accent opacity-40 blur-3xl"></div>
+      <div class="absolute -right-36 bottom-24 w-[500px] h-[500px] rounded-full bg-gradient-to-br from-[#001219] to-[#002532] opacity-60 blur-2xl"></div>
+    </div>
+
+    <div class="container mx-auto px-6 lg:px-20">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+        <!-- avatar + quick info -->
+        <div class="col-span-1 flex justify-center md:justify-start">
+          <div class="glass glow p-4 rounded-2xl w-44 h-44 flex items-center justify-center float reveal delay-1">
+            <img src="/assets/rudra-avatar.jpg" alt="Rudra Pratap Singh" class="w-36 h-36 object-cover rounded-lg shadow-md" onerror="this.style.objectFit='cover';">
+          </div>
+        </div>
+
+        <!-- name + headline -->
+        <div class="col-span-2 text-center md:text-left">
+          <h1 class="hero-title font-extrabold neon reveal delay-1">Rudra Pratap Singh <span class="text-sm text-slate-300 font-medium">— Rudi</span></h1>
+          <p class="mt-4 text-slate-300 max-w-2xl reveal delay-2">B.Tech Student — Computer Science &amp; Engineering (Core) at <strong>SRM Institute of Science and Technology, Kattankulathur</strong>. Based in <em>Paari G Block,</em> on campus. Formative years across <strong>Raipur, Mumbai, Varanasi, &amp; Al Ain</strong>.</p>
+
+          <div class="mt-6 flex flex-col sm:flex-row sm:items-center gap-3 justify-center md:justify-start">
+            <a href="#projects" class="inline-flex items-center gap-3 px-5 py-3 rounded-full bg-gradient-to-r from-cyan-400 to-blue-600 text-black font-semibold shadow hover:scale-[1.01] transition">Explore Projects</a>
+            <a href="#contact" class="inline-flex items-center gap-3 px-5 py-3 rounded-full ring-1 ring-white/6 text-slate-200 hover:bg-white/4 transition">Contact Rudi</a>
+          </div>
+
+          <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 text-left text-slate-300">
+            <div>
+              <div class="text-sm text-slate-400">Email</div>
+              <div class="font-medium text-slate-100">Rudra7275277928@gmail.com</div>
+            </div>
+            <div>
+              <div class="text-sm text-slate-400">Phone</div>
+              <div class="font-medium text-slate-100">+91 88107 59951</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- quick skills bar -->
+      <div class="mt-10 glass p-4 rounded-2xl ring-accent flex gap-3 items-center justify-between">
+        <div class="flex items-center gap-4">
+          <span class="px-3 py-1 rounded-full bg-white/5 text-sm">Web & Frontend</span>
+          <span class="px-3 py-1 rounded-full bg-white/5 text-sm">Tailwind CSS</span>
+          <span class="px-3 py-1 rounded-full bg-white/5 text-sm">Animations</span>
+        </div>
+        <div class="text-sm text-slate-300">Rapid creative iteration • Code compliance • Competitive programming</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-20">
+    <div class="container mx-auto px-6 lg:px-20">
+      <div class="glass p-10 rounded-3xl reveal delay-1">
+        <h2 class="text-2xl font-bold neon">About Me</h2>
+        <p class="mt-4 text-slate-300 leading-relaxed">I build cinematic, interactive web experiences that reflect my personal brand — polished, test-ready, and performance-first. I care about pixel-perfect output (especially for C &amp; Python problems) and shipping creative projects that are instantly recognizable. I move fast, expect greatness, and enjoy collaborating with people who are equally driven.</p>
+
+        <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="p-4 rounded-xl bg-white/3">
+            <div class="text-sm text-slate-300">Current</div>
+            <div class="font-semibold text-white mt-1">B.Tech CSE (Core) — SRM IST</div>
+          </div>
+          <div class="p-4 rounded-xl bg-white/3">
+            <div class="text-sm text-slate-300">Location</div>
+            <div class="font-semibold text-white mt-1">Paari G Block, SRM Campus</div>
+          </div>
+          <div class="p-4 rounded-xl bg-white/3">
+            <div class="text-sm text-slate-300">Interests</div>
+            <div class="font-semibold text-white mt-1">Cinematic UI • Algorithms • Code precision</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="py-20 bg-gradient-to-b from-transparent to-black/20">
+    <div class="container mx-auto px-6 lg:px-20">
+      <h2 class="text-3xl font-bold neon reveal delay-1">Featured Projects</h2>
+      <p class="mt-2 text-slate-300 max-w-2xl reveal delay-2">Hand-picked projects that show both creative UI design and solid engineering. Replace links with your GitHub repos when ready.</p>
+
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Project 1 -->
+        <article class="project-card glass p-6 rounded-2xl reveal delay-2">
+          <div class="flex items-start justify-between">
+            <div>
+              <h3 class="text-xl font-semibold neon">Code × Ninja 10 — Landing</h3>
+              <p class="mt-2 text-slate-300 text-sm">Glassmorphism landing page with katana animation, audio cues, QR integration, and hidden Easter eggs.</p>
+            </div>
+            <div class="text-sm text-slate-400">Web • UI</div>
+          </div>
+          <div class="mt-6 flex gap-3">
+            <a class="px-3 py-2 rounded-full bg-white/5 text-sm" href="#">View demo</a>
+            <a class="px-3 py-2 rounded-full ring-1 ring-white/6 text-sm" href="#">GitHub</a>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card glass p-6 rounded-2xl reveal delay-3">
+          <div class="flex items-start justify-between">
+            <div>
+              <h3 class="text-xl font-semibold neon">Train Delay Debugger</h3>
+              <p class="mt-2 text-slate-300 text-sm">A debugging system for timetable & delay logic — modular C programs with branded, test-ready outputs.</p>
+            </div>
+            <div class="text-sm text-slate-400">C • Algorithms</div>
+          </div>
+          <div class="mt-6 flex gap-3">
+            <a class="px-3 py-2 rounded-full bg-white/5 text-sm" href="#">Read notes</a>
+            <a class="px-3 py-2 rounded-full ring-1 ring-white/6 text-sm" href="#">GitHub</a>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card glass p-6 rounded-2xl reveal delay-3">
+          <div class="flex items-start justify-between">
+            <div>
+              <h3 class="text-xl font-semibold neon">Modular C Utilities</h3>
+              <p class="mt-2 text-slate-300 text-sm">Tooling for competitive programming — exact output formatting and 100% test case compliance is the goal.</p>
+            </div>
+            <div class="text-sm text-slate-400">C • CLI</div>
+          </div>
+          <div class="mt-6 flex gap-3">
+            <a class="px-3 py-2 rounded-full bg-white/5 text-sm" href="#">Download</a>
+            <a class="px-3 py-2 rounded-full ring-1 ring-white/6 text-sm" href="#">GitHub</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-20">
+    <div class="container mx-auto px-6 lg:px-20">
+      <div class="glass p-10 rounded-3xl reveal delay-1">
+        <h2 class="text-2xl font-bold neon">Contact</h2>
+        <p class="mt-2 text-slate-300">Want to collaborate or need a code review? I give blunt, actionable feedback and rapid iterations.</p>
+
+        <form id="contactForm" class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+          <input type="text" name="name" placeholder="Your name" class="p-3 rounded-lg bg-transparent ring-1 ring-white/6 text-white" required>
+          <input type="email" name="email" placeholder="Your email" class="p-3 rounded-lg bg-transparent ring-1 ring-white/6 text-white" required>
+          <textarea name="message" placeholder="Message" rows="5" class="p-3 rounded-lg bg-transparent ring-1 ring-white/6 text-white md:col-span-2" required></textarea>
+
+          <button type="submit" class="md:col-span-2 inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-cyan-400 to-blue-600 text-black font-semibold">Send message</button>
+        </form>
+
+        <div class="mt-6 text-slate-300 text-sm">Or email me directly: <a href="mailto:Rudra7275277928@gmail.com" class="text-cyan-200 underline">Rudra7275277928@gmail.com</a></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-12 text-center text-slate-400">
+    <div class="container mx-auto px-6 lg:px-20">© 2025 Rudra Pratap Singh — Rudi. Built with Tailwind &amp; caffeine.</div>
+  </footer>
+
+  <script>
+    // small client-side niceties
+    document.getElementById('contactForm')?.addEventListener('submit', function(e){
+      e.preventDefault();
+      alert('Thanks — message captured (UI-only). I will reply via email when connected.');
+      this.reset();
+    });
+
+    // reveal on scroll
+    const obs = new IntersectionObserver((entries)=>{
+      entries.forEach(en=>{ if(en.isIntersecting) en.target.classList.add('revealed'); });
+    },{threshold:0.12});
+    document.querySelectorAll('.reveal').forEach(el=>{ obs.observe(el); el.classList.add('will-reveal'); });
+  </script>
+</body>
+</html>
